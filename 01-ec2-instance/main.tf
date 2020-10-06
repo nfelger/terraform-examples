@@ -22,3 +22,7 @@ resource "aws_instance" "web" {
   key_name        = var.keypair_name
 }
 
+output "public_ip" {
+  value = "Connect via ${aws_instance.web.public_ip}"
+}
+
